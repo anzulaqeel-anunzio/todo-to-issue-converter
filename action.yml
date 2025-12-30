@@ -1,0 +1,26 @@
+# Developed for Anunzio International by Anzul Aqeel. Contact +971545822608 or +971585515742. Linkedin Profile: linkedin.com/in/anzulaqeel
+
+name: 'TODO to Issue Converter'
+description: 'Converts TODO comments in code to GitHub Issues.'
+author: 'Anzul Aqeel'
+inputs:
+  token:
+    description: 'GitHub Token'
+    required: true
+    default: '${{ github.token }}'
+  keyword:
+    description: 'Keyword to search for (e.g. TODO, FIXME)'
+    required: false
+    default: 'TODO'
+  close_on_resolve:
+    description: 'Whether to close the issue when the TODO line is removed'
+    required: false
+    default: 'true'
+runs:
+  using: 'node16'
+  main: 'index.js'
+branding:
+  icon: 'check-square'
+  color: 'green'
+
+# Developed for Anunzio International by Anzul Aqeel. Contact +971545822608 or +971585515742. Linkedin Profile: linkedin.com/in/anzulaqeel
